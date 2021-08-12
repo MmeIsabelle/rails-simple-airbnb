@@ -1,0 +1,16 @@
+<h1>All our Flats (<%= @flats.size %>)</h1>
+<div class="d-flex">
+      <% @flats.each do |flat| %>
+        <div class="card m-1 shadow-sm">
+          <div class="bg-light p-2 ">
+            <h3><%= flat.name %></h3>
+            <p><%= flat.address %></p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><span class="mx-2"><i class="fas fa-user-friends"></i></span><%= flat.number_of_guests %></li>
+              <li class="list-inline-item"><span class="mx-2"><i class="fas fa-dollar-sign"></i></span><%= flat.price_per_night %></li>
+            </ul>
+          </div>
+          <div class="p-2"><p>More info</p></div>
+        </div>
+      <% end %>
+</div>
